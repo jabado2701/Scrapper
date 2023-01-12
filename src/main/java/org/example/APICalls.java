@@ -1,17 +1,16 @@
 package org.example;
 
 
-import java.io.IOException;
+import scrappingFunctions.HotelScrapper;
 
-
-import static org.example.Tools.base;
+import static scrappingFunctions.Tools.base;
 import static spark.Spark.get;
 
-public class GetFunctions {
+public class APICalls {
 
     private final HotelScrapper hotelScrapper;
 
-    public GetFunctions(HotelScrapper hotelScrapper) {
+    public APICalls(HotelScrapper hotelScrapper) {
         this.hotelScrapper = hotelScrapper;
     }
 
@@ -21,7 +20,7 @@ public class GetFunctions {
             get("/hotels/:name", ((request, response) -> {
                 String url = base + request.params("name");
                 response.header("content-type", "application/json");
-                return hotelScrapper.ubication(url);
+                return hotelScrapper.location(url);
             }));
             get("/hotels/:name/services", ((request, response) -> {
                 String url = base + request.params("name");

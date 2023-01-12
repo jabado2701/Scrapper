@@ -1,4 +1,4 @@
-package org.example;
+package scrappingFunctions;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -19,12 +19,11 @@ public class Tools {
 
 
     public static Document getHTML(String url) throws IOException {
-        Document document = Jsoup.connect(url).get();
-        return document;
+        return Jsoup.connect(url).get();
     }
 
 
-    public static String reviewUrl(String url) throws IOException {
+    public static String reviewUrl(String url) {
         String base = "https://www.booking.com/reviews/";
 
         String lugar = getCountry(url);
@@ -36,8 +35,7 @@ public class Tools {
         while (matcher.find()) {
             urlList.add(matcher.group(1));
         }
-        String newUrl = base + lugar + "/hotel/" + urlList.get(0);
-        return newUrl;
+        return base + lugar + "/hotel/" + urlList.get(0);
     }
 
     private static String getCountry(String url) {
@@ -49,11 +47,10 @@ public class Tools {
             place.add(matcher.group(1));
         }
 
-        String country = place.get(0);
-        return country;
+        return place.get(0);
     }
 
-    public static String coincidenceComprobation(String url) throws IOException {
+    public static String coincidenceVerification(String url) throws IOException {
 
         List<String> list = getUrl(url);
         List<String> regex = getFirstCoincidence(list);
@@ -63,8 +60,7 @@ public class Tools {
             System.exit(0);
         }
 
-        String ret = regex.get(0);
-        return ret;
+        return regex.get(0);
 
     }
 

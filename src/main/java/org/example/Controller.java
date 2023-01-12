@@ -1,10 +1,9 @@
 package org.example;
 
-import java.io.IOException;
+import scrappingFunctions.Booking;
 
 public class Controller {
-    public void controller() throws IOException {
-        new GetFunctions(new Booking()).gets();
+    public void controller() {
+        new APICalls(new Booking()).gets();
     }
-
 }

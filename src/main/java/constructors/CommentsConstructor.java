@@ -4,9 +4,9 @@ import java.util.List;
 
 public class CommentsConstructor {
 
-    String autor;
+    String author;
 
-    String fechasEscritura;
+    String writtenDates;
 
     String country;
 
@@ -18,27 +18,27 @@ public class CommentsConstructor {
 
     String positive;
 
-    String fechasEstancia;
+    String stayDates;
 
-    List<String> etiquetas;
+    List<String> customerTags;
 
     public CommentsConstructor() {
     }
 
-    public String getFechasEscritura() {
-        return fechasEscritura;
+    public String getWrittenDates() {
+        return writtenDates;
     }
 
-    public void setFechasEscritura(String fechasEscritura) {
-        this.fechasEscritura = fechasEscritura;
+    public void setWrittenDates(String writtenDates) {
+        this.writtenDates = writtenDates;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getCountry() {
@@ -81,19 +81,19 @@ public class CommentsConstructor {
         this.positive = positive;
     }
 
-    public String getFechasEstancia() {
-        return fechasEstancia;
+    public String getStayDates() {
+        return stayDates;
     }
 
-    public void setFechasEstancia(String fechasEstancia) {
-        this.fechasEstancia = fechasEstancia;
+    public void setStayDates(String stayDates) {
+        this.stayDates = stayDates;
     }
 
-    public List<String> getEtiquetas() {
-        return etiquetas;
+    public List<String> getCustomerTags() {
+        return customerTags;
     }
 
-    public void setEtiquetas(List<String> etiquetas) {
-        this.etiquetas = etiquetas;
+    public void setCustomerTags(List<String> customerTags) {
+        this.customerTags = customerTags;
     }
 }
