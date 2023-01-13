@@ -23,9 +23,9 @@ public class Booking implements HotelScrapper {
         location.setName(hotel);
         Elements comment = Tools.getHTML(Tools.coincidenceVerification(name)).select("span.hp_address_subtitle.js-hp_address_subtitle.jq_tooltip");
         String place = comment.select("span").attr("title aria-describedby", "tooltip-1").text();
-        location.setUbicacion(place);
+        location.setLocation(place);
         String coordinates = Tools.getHTML(Tools.coincidenceVerification(name)).select("a").attr("data-atlas-latlng");
-        location.setCoordenadas(coordinates);
+        location.setCoordinates(coordinates);
         return gson.toJson(location);
     }
 
@@ -48,7 +48,7 @@ public class Booking implements HotelScrapper {
                 contents.add(specificService.text());
             }
             facilitiesList.put(globalAttribute, contents);
-            facilities.setServicios(facilitiesList);
+            facilities.setServices(facilitiesList);
         }
         return gson.toJson(facilities);
     }

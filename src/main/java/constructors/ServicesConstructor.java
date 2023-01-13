@@ -5,19 +5,19 @@ import java.util.Map;
 
 public class ServicesConstructor {
 
-    Map<String, List<String>> servicios;
+    Map<String, List<String>> services;
 
 
     public ServicesConstructor() {
-        this.servicios = servicios;
+        this.services = services;
     }
 
-    public Map<String, List<String>> getServicios() {
-        return servicios;
+    public Map<String, List<String>> getServices() {
+        return services;
     }
 
-    public void setServicios(Map<String, List<String>> servicios) {
-        this.servicios = servicios;
+    public void setServices(Map<String, List<String>> services) {
+        this.services = services;
     }
 
 }

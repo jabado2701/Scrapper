@@ -4,14 +4,14 @@ public class UbicationConstructor {
 
     String name;
 
-    String ubicacion;
+    String location;
 
-    String coordenadas;
+    String coordinates;
 
     public UbicationConstructor() {
         this.name = name;
-        this.ubicacion = ubicacion;
-        this.coordenadas = coordenadas;
+        this.location = location;
+        this.coordinates = coordinates;
     }
 
     public String getName() {
@@ -22,19 +22,19 @@ public class UbicationConstructor {
         this.name = name;
     }
 
-    public String getUbicacion() {
-        return ubicacion;
+    public String getLocation() {
+        return location;
     }
 
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public String getCoordenadas() {
-        return coordenadas;
+    public String getCoordinates() {
+        return coordinates;
     }
 
-    public void setCoordenadas(String coordenadas) {
-        this.coordenadas = coordenadas;
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
     }
 }
